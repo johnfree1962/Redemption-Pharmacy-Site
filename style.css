@@ -18,6 +18,46 @@ body {
     margin: 0 auto;
 }
 
+.btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #40B3A2;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .95;
+}
+
+.btn .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple{
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
 header {
     background: #020024;
     background: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 63, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
@@ -43,6 +83,39 @@ header ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    display: inline-block;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: inline-block;
+      border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+   background: rgb(0,140,255);
+    
+}
+
+header ul li:hover {
+
+        box-shadow: 0 0 25px rgb(0,140,255);
+    box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
 }
 
 header a {
@@ -66,11 +139,7 @@ header .container::after {
 /* Hero Section */
 .hero {
     background: #020024;
-background: -webkit-linear-gradient(358deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 28%, rgba(0, 212, 255, 1) 97%);
-background: -moz-linear-gradient(358deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 28%, rgba(0, 212, 255, 1) 97%);
-background: linear-gradient(358deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 28%, rgba(0, 212, 255, 1) 97%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#00D4FF", GradientType=0);
-    color: #fff;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(2, 0, 36, 1) 0%, rgba(8, 38, 131, 1) 23%, rgba(0, 203, 248, 1) 54%, rgba(0, 43, 255, 1) 73%, rgba(0, 113, 255, 1) 76%, rgba(0, 212, 255, 1) 82%, rgba(0, 212, 255, 1) 91%);    color: #fff;
     padding: 60px 0;
     text-align: center;
 }
@@ -78,6 +147,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endC
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 18px;
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #fff;
+    color: #0639f0;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 1.05rem;
+    
+    
 }
 
 .hero p {
@@ -89,12 +168,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endC
     display: inline-block;
     padding: 12px 32px;
     background-color: #fff;
-    color: #4caf50;
+    color: #5243ae;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.05rem;
-    transition: background 0.2s, color 0.2s;
+    
 }
 
 .btn:hover {
@@ -125,11 +204,28 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endC
     max-width: 320px;
     margin: 10px;
     transition: box-shadow 0.2s;
+    padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+   background: rgb(0,140,255);
+
 }
 
 .feature:hover {
-    box-shadow: 0 4px 18px rgba(76, 175, 80, 0.15);
+    box-shadow: 0 0 25px rgb(0,140,255);
+    box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
 }
+
 
 .feature img {
     width: 60px;
@@ -145,27 +241,28 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endC
 
 /* About Section */
 .about {
-    background: #e8f5e9;
+    background: #9ec0ca;
     padding: 50px 0;
     text-align: center;
+    
 }
 
 .about h2 {
-    color: #388e3c;
+    color: #221ac3;
     margin-bottom: 18px;
-    font-size: 2rem;
+    font-size: 1.rem;
 }
 
 .about p {
     max-width: 780px;
     margin: 0 auto;
-    font-size: 1.07rem;
-    color: #444;
+    font-size: 1.3rem;
+    color: #000000;
 }
 
 /* Footer */
 footer {
-    background-color: #388e3c;
+    background-color: #38638e;
     color: #fff;
     text-align: center;
     padding: 18px 0;
@@ -190,4 +287,40 @@ footer {
         text-align: center;
         margin: 0 0 8px 0;
     }
+}
+
+/* Redemption Logo */
+.logo {
+ 
+    
+    }
+img {
+    width: 20%;
+    border-radius: 50%;
+    float: left;
+    margin-top: 0.6%;
+    margin-
+}
+
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+   background: rgb(0,140,255);
+  box-shadow: 0 0 25px rgb(0,140,255);
+  }
+
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(82, 180, 17),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
 }
